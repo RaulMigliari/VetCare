@@ -123,3 +123,47 @@ body {
 .card-btn:hover {
     background: #1dd457;
 }
+
+.resumo-section {
+    padding: 40px 5%;
+    text-align: center;
+}
+
+.resumo-section h2 {
+    color: #1e3a1e;
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.resumo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.card-resumo {
+    background: white;
+    padding: 30px 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s;
+}
+
+.card-resumo:hover {
+    transform: translateY(-5px);
+}
+
+.card-resumo h3 {
+    color: #1e3a1e;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.card-resumo p {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #23e865;
+}
+  

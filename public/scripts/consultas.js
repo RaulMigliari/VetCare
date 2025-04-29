@@ -2,14 +2,14 @@ document.addEventListener('DOMContentLoaded', async () => {
   const grid = document.getElementById('consultasGrid')
   const usuario = JSON.parse(localStorage.getItem('usuarioLogado'))
 
-  if (!usuario?.email) {
+  if (!usuario?.id) {
     alert('Você precisa estar logado.')
     window.location.href = 'login.html'
     return
   }
 
   try {
-    const response = await fetch(`http://localhost:5000/api/consultas/cliente?email=${encodeURIComponent(usuario.email)}`)
+    const response = await fetch(`http://localhost:5000/api/consultas/cliente/${usuario.id}`)
     const consultas = await response.json()
 
     if (!Array.isArray(consultas) || consultas.length === 0) {
@@ -65,4 +65,3 @@ document.addEventListener('DOMContentLoaded', async () => {
     grid.innerHTML = '<p>Erro ao carregar suas consultas.</p>'
   }
 })
-  

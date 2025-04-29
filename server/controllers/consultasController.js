@@ -157,3 +157,41 @@ export async function listarConsultasPorData(req, res) {
 
   res.status(200).json(consultasComTutor)
 }
+
+export async function listarConsultasPorCliente(req, res) {
+  const clienteId = req.params.clienteId
+
+  const { data, error } = await supabase
+    .from('consultas')
+    .select(`
+      id,
+      data,
+      horario,
+      tipo,
+      status,
+      pets (
+        nome,
+        dono_id
+      )
+    `)
+    .order('data', { ascending: true })
+    .order('horario', { ascending: true })
+
+  if (error) {
+    return res.status(500).json({ error: error.message })
+  }
+
+  // Filtrar consultas do cliente
+  const consultasDoCliente = data.filter(consulta => consulta.pets?.dono_id === clienteId)
+
+  const consultasFormatadas = consultasDoCliente.map(consulta => ({
+    id: consulta.id,
+    data: consulta.data,
+    horario: consulta.horario,
+    tipo: consulta.tipo,
+    status: consulta.status,
+    nome_pet: consulta.pets.nome
+  }))
+
+  res.status(200).json(consultasFormatadas)
+}
