@@ -26,7 +26,7 @@ export async function registerUser(req, res) {
   const { error: petError } = await supabase
     .from('pets')
     .insert([{
-      nome: nomePet,
+      nome: nomePet.trim().toLowerCase(),
       raca,
       idade,
       dono_id: usuario.id

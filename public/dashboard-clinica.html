@@ -11,18 +11,18 @@
   <!-- Cabeçalho -->
   <header class="dashboard-header">
     <div class="logo">
-      <a href="dashboard-clinica.html"><img src="/public/assets/vetcareLogo.png" alt="Logo VetCare"></a>
+      <img src="/public/assets/vetcareLogo.png" alt="Logo VetCare">
       <h1>VetCare Clínica</h1>
     </div>
     <nav>
-      <a href="index.html" class="logout-btn">Sair</a>
+      <a href="#" id="logoutBtn" class="logout-btn">Sair</a>
     </nav>
   </header>
 
   <!-- Conteúdo principal -->
   <main class="dashboard-main">
     <section class="welcome-section">
-      <h2>Bem-vindo(a), [Nome do Veterinário/Admin]</h2>
+      <h2 id="boasVindas">Bem-vindo(a)!</h2>
       <p>Gerencie os atendimentos da clínica de forma prática e rápida.</p>
     </section>
 
@@ -49,5 +49,7 @@
       </div>
     </section>
   </main>
+
+  <script src="./scripts/dashboard.js" type="module"></script>
 </body>
 </html>

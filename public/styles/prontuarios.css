@@ -1,4 +1,4 @@
-/* Reset */
+/* Reset básico */
 * {
     margin: 0;
     padding: 0;
@@ -55,62 +55,104 @@ body {
 
 /* Conteúdo principal */
 .dashboard-main {
+    padding: 40px 5%;
     flex: 1;
-    padding: 50px 5%;
+}
+
+.prontuario-section h2,
+.prontuario-section h3 {
+    color: #1e3a1e;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
     text-align: center;
 }
 
-.prontuarios-section h2 {
-    color: #1e3a1e;
-    font-size: 2rem;
-    margin-bottom: 40px;
+#buscarForm {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 30px;
 }
 
-.prontuarios-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-    max-width: 1000px;
-    margin: 0 auto;
+#buscarForm input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 250px;
+    font-size: 1rem;
+}
+
+#buscarForm button {
+    background: #23e865;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#buscarForm button:hover {
+    background: #1dd457;
+}
+
+.resultado {
+    max-width: 800px;
+    margin: 0 auto 40px auto;
 }
 
 .prontuario-card {
     background: white;
-    padding: 25px;
-    border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s;
-    text-align: left;
-}
-
-.prontuario-card:hover {
-    transform: translateY(-5px);
-}
-
-.prontuario-card h3 {
-    color: #1e3a1e;
-    font-size: 1.3rem;
-    margin-bottom: 10px;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
 }
 
 .prontuario-card p {
-    color: #555;
-    font-size: 1rem;
     margin-bottom: 8px;
+    color: #333;
 }
 
-.edit-btn {
-    display: inline-block;
-    margin-top: 15px;
+.novo-prontuario form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 0 auto;
+    gap: 15px;
+}
+
+.novo-prontuario input,
+.novo-prontuario textarea {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.novo-prontuario textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.novo-prontuario button {
     background: #23e865;
     color: white;
-    padding: 10px 15px;
-    border-radius: 8px;
-    text-decoration: none;
     font-weight: bold;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
     transition: background-color 0.3s;
 }
 
-.edit-btn:hover {
+.novo-prontuario button:hover {
     background: #1dd457;
+}
+
+.erro {
+    color: red;
+    text-align: center;
+    margin-top: 10px;
 }

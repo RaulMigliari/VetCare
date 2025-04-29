@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function () {
             senha,
             tipo: 'cliente', // por padrão o form registra um cliente
             pet: {
-              nome: nomePet,
+              nome: nomePet.trim().toLowerCase(),
               raca: racaPet,
               idade: idadePet
             }

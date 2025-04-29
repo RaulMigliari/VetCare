@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Prontuários | VetCare</title>
   <link rel="stylesheet" href="styles/prontuarios.css">
   <link rel="icon" href="/public/assets/vetcareLogo.png" type="image/png">
 </head>
 <body>
-  <!-- Cabeçalho -->
   <header class="dashboard-header">
     <div class="logo">
       <a href="dashboard-clinica.html"><img src="/public/assets/vetcareLogo.png" alt="Logo VetCare"></a>
@@ -19,36 +18,28 @@
     </nav>
   </header>
 
-  <!-- Conteúdo principal -->
   <main class="dashboard-main">
-    <section class="prontuarios-section">
-      <h2>Prontuários</h2>
+    <section class="prontuario-section">
+      <h2>Buscar Prontuário por Pet</h2>
 
-      <div class="prontuarios-grid">
-        <!-- Cada prontuário -->
-        <div class="prontuario-card">
-          <h3>Rex - Labrador</h3>
-          <p>Data da Última Consulta: 10/05/2025</p>
-          <p>Diagnóstico: Dermatite Alérgica</p>
-          <a href="#" class="edit-btn">Editar Prontuário</a>
-        </div>
+      <form id="buscarForm">
+        <input type="text" id="nomePet" placeholder="Digite o nome do pet..." required>
+        <button type="submit">Buscar</button>
+      </form>
 
-        <div class="prontuario-card">
-          <h3>Luna - Poodle</h3>
-          <p>Data da Última Consulta: 08/05/2025</p>
-          <p>Diagnóstico: Vacinação Anual</p>
-          <a href="#" class="edit-btn">Editar Prontuário</a>
-        </div>
+      <div id="resultadoBusca" class="resultado"></div>
 
-        <div class="prontuario-card">
-          <h3>Bob - Bulldog</h3>
-          <p>Data da Última Consulta: 07/05/2025</p>
-          <p>Diagnóstico: Tratamento Otite</p>
-          <a href="#" class="edit-btn">Editar Prontuário</a>
-        </div>
-        <!-- Mais prontuários futuramente -->
-      </div>
+      <section class="novo-prontuario" style="display: none;">
+        <h3>Adicionar Novo Prontuário</h3>
+        <form id="formNovoProntuario">
+          <input type="text" id="veterinario" placeholder="Nome do veterinário" required>
+          <textarea id="descricao" placeholder="Descrição do atendimento" required></textarea>
+          <button type="submit">Salvar Prontuário</button>
+        </form>
+      </section>
     </section>
   </main>
+
+  <script src="scripts/prontuarios.js" type="module"></script>
 </body>
 </html>

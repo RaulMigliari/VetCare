@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Agendar Consulta | VetCare</title>
+  <link rel="stylesheet" href="styles/agendar.css">
+  <link rel="icon" href="/public/assets/vetcareLogo.png" type="image/png">
+</head>
+<body>
+  <header class="dashboard-header">
+    <div class="logo">
+      <img src="/public/assets/vetcareLogo.png" alt="Logo VetCare">
+      <h1>VetCare</h1>
+    </div>
+    <nav>
+      <a href="consultas.html" class="back-btn">Voltar</a>
+    </nav>
+  </header>
+
+  <main class="dashboard-main">
+    <section class="agendar-section">
+      <h2>Agendar Consulta</h2>
+
+      <form id="agendarForm">
+        <div class="form-group">
+          <label for="petNome">Nome do Pet</label>
+          <input type="text" id="petNome" required>
+        </div>
+
+        <div class="form-group">
+          <label for="data">Data</label>
+          <input type="date" id="data" required>
+        </div>
+
+        <div class="form-group">
+          <label for="horario">Horário</label>
+          <input type="time" id="horario" required>
+        </div>
+
+        <div class="form-group">
+          <label for="tipo">Tipo de Consulta</label>
+          <select id="tipo" required>
+            <option value="consulta clínica">Consulta Clínica</option>
+            <option value="vacinação">Vacinação</option>
+            <option value="retorno">Retorno</option>
+          </select>
+        </div>
+
+        <button type="submit" class="btn-agendar">Agendar</button>
+      </form>
+    </section>
+  </main>
+
+  <script src="scripts/agendar.js" type="module"></script>
+</body>
+</html>
