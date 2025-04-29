@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | VetCare Clinic</title>
+    <link rel="stylesheet" href="styles/login.css">
+    <link rel="icon" href="/public/assets/vetcareLogo.png" type="image/png">
+</head>
+<body>
+    <div class="login-container">
+        <div class="logo">
+            <a href="./index.html"><img src="/public/assets/vetcareLogo.png" alt="Ícone VetCare"></a>
+            <h1>VetCare Clinic</h1>
+        </div>
+
+        <!-- NOVO BLOCO DE ESCOLHA -->
+        <div class="user-type-selection">
+            <button type="button" class="user-type-btn active" data-user="cliente">Cliente</button>
+            <button type="button" class="user-type-btn" data-user="clinica">Clínica</button>
+        </div>
+
+        <!-- Formulário de Login -->
+        <form id="loginForm">
+            <input type="hidden" id="userType" value="cliente"> <!-- Define o tipo escolhido -->
+
+            <div class="input-group">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" placeholder="exemplo@clinica.com" required>
+            </div>
+
+            <div class="input-group">
+                <label for="password">Senha</label>
+                <input type="password" id="password" placeholder="••••••••" required>
+            </div>
+
+            <button type="submit" class="login-btn">
+                <span class="btn-text">Entrar</span>
+                <span class="btn-icon">→</span>
+            </button>
+
+            <div class="footer-links">
+                <a href="#">Esqueci minha senha</a>
+                <a href="register.html">Cadastrar nova conta</a>
+            </div>
+        </form>
+    </div>
+
+    <script src="scripts/auth.js"></script>
+    <script>
+        // Script de troca de tipo de login
+        const userTypeButtons = document.querySelectorAll('.user-type-btn');
+        const userTypeInput = document.getElementById('userType');
+
+        userTypeButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                userTypeButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+                userTypeInput.value = button.getAttribute('data-user');
+                console.log('Tipo de usuário selecionado:', userTypeInput.value);
+            });
+        });
+    </script>
+</body>
+</html>

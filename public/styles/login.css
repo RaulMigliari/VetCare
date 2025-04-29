@@ -1,0 +1,141 @@
+/* Reset e Fontes */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #f5f7fa 0%, #e8f5e9 100%); /* Fundo com leve tom verde */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-container {
+    background: white;
+    width: 100%;
+    max-width: 400px;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.logo {
+    margin-bottom: 2rem;
+}
+
+.logo img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 1rem;
+}
+
+.logo h1 {
+    color: #1e3a1e; /* Verde escuro para contraste */
+    font-size: 1.8rem;
+}
+
+/* NOVO - Seleção de tipo de usuário */
+.user-type-selection {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 2rem;
+}
+
+.user-type-btn {
+    background: #dfe6e9;
+    color: #1e3a1e;
+    border: 2px solid #23e865;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+.user-type-btn:hover {
+    background: #23e865;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.user-type-btn.active {
+    background: #23e865;
+    color: white;
+}
+
+/* Formulário */
+.input-group {
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #2d3436;
+    font-weight: 600;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #dfe6e9;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s;
+}
+
+.input-group input:focus {
+    border-color: #23e865; /* Verde foco */
+    outline: none;
+}
+
+/* Botão de Login */
+.login-btn {
+    background: linear-gradient(to right, #23e865, #1e9d57); /* Gradiente verde */
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    width: 100%;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1.5rem 0;
+    transition: all 0.3s;
+}
+
+.login-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(35, 232, 101, 0.3); /* Sombra verde */
+}
+
+.btn-icon {
+    font-size: 1.2rem;
+}
+
+/* Links do formulário */
+.footer-links {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+}
+
+.footer-links a {
+    color: #7f8c8d;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #23e865; /* Verde nos links */
+}

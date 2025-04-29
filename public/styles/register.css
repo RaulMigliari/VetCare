@@ -1,0 +1,142 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #f5f7fa 0%, #e8f5e9 100%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Cabeçalho */
+.register-header {
+    background: white;
+    padding: 20px 5%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    width: 40px;
+    height: 40px;
+}
+
+.logo h1 {
+    color: #1e3a1e;
+    font-size: 1.5rem;
+}
+
+/* Conteúdo principal */
+.register-main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 5%;
+}
+
+.register-section {
+    background: white;
+    padding: 40px 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+}
+
+.register-section h2 {
+    color: #1e3a1e;
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+/* Formulário */
+#registerForm {
+    text-align: left;
+}
+
+fieldset {
+    border: none;
+    margin-bottom: 30px;
+}
+
+legend {
+    color: #23e865;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #2d3436;
+    font-weight: 600;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #dfe6e9;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s;
+}
+
+.form-group input:focus {
+    border-color: #23e865;
+    outline: none;
+}
+
+/* Botão */
+.register-btn {
+    background: linear-gradient(to right, #23e865, #1e9d57);
+    color: white;
+    padding: 12px 20px;
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.register-btn:hover {
+    background: #1dd457;
+    transform: translateY(-2px);
+}
+
+/* Link voltar login */
+.back-to-login {
+    margin-top: 20px;
+    font-size: 0.9rem;
+}
+
+.back-to-login a {
+    color: #23e865;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.back-to-login a:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Cliente | VetCare</title>
+    <link rel="stylesheet" href="./styles/dashboard-client.css">
+    <link rel="icon" href="/public/assets/vetcareLogo.png" type="image/png">
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header class="dashboard-header">
+        <div class="logo">
+            <a href="dashboard-client.html"><img src="/public/assets/vetcareLogo.png" alt="Logo VetCare"></a>
+            <h1>VetCare</h1>
+        </div>
+        <nav>
+            <a href="index.html" class="logout-btn">Sair</a>
+        </nav>
+    </header>
+
+    <!-- Conteúdo principal -->
+    <main class="dashboard-main">
+        <section class="welcome-section">
+            <h2>Bem-vindo(a), [Nome do Cliente]</h2>
+            <p>O que deseja fazer hoje?</p>
+        </section>
+
+        <section class="cards-section">
+            <div class="card">
+                <img src="/public/assets/pet-icon.png" alt="Pets">
+                <h3>Meus Pets</h3>
+                <p>Visualizar e cadastrar novos pets.</p>
+                <a href="./pets.html" class="card-btn">Ver Pets</a>
+            </div>
+
+            <div class="card">
+                <img src="/public/assets/calendar.png" alt="Consultas">
+                <h3>Minhas Consultas</h3>
+                <p>Agendar nova consulta ou ver histórico.</p>
+                <a href="./consultas.html" class="card-btn">Ver Consultas</a>
+            </div>
+
+            <div class="card">
+                <img src="/public/assets/profile.png" alt="Perfil">
+                <h3>Meu Perfil</h3>
+                <p>Atualizar informações pessoais.</p>
+                <a href="./consultas.html" class="card-btn">Editar Perfil</a>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
