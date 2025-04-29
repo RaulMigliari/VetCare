@@ -1,130 +1,148 @@
 /* Reset básico */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  }
-  
-  body {
-    background: #f5f7fa;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  /* Cabeçalho */
-  .dashboard-header {
-    background: white;
-    padding: 20px 5%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-  
-  .logo img {
-    width: 40px;
-    height: 40px;
-  }
-  
-  .logo h1 {
-    color: #1e3a1e;
-    font-size: 1.5rem;
-  }
-  
-  .back-btn {
-    background: #23e865;
-    color: white;
-    padding: 8px 20px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background-color 0.3s;
-  }
-  
-  .back-btn:hover {
-    background: #1dd457;
-  }
-  
-  /* Conteúdo principal */
-  .dashboard-main {
-    flex: 1;
-    padding: 50px 5%;
-    text-align: center;
-  }
-  
-  .consultas-section h2 {
-    color: #1e3a1e;
-    font-size: 2rem;
-    margin-bottom: 40px;
-  }
-  
-  .consultas-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 30px;
-    max-width: 1000px;
-    margin: 0 auto;
-  }
-  
-  .consulta-card {
-    background: white;
-    padding: 25px;
-    border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s;
-    text-align: left;
-  }
-  
-  .consulta-card:hover {
-    transform: translateY(-5px);
-  }
-  
-  .consulta-card h3 {
-    color: #1e3a1e;
-    font-size: 1.3rem;
-    margin-bottom: 10px;
-  }
-  
-  .consulta-card p {
-    color: #555;
-    font-size: 1rem;
-    margin-bottom: 8px;
-  }
-  
-  .btn-cancelar {
-    margin-top: 10px;
-    background: #e74c3c;
-    color: white;
-    border: none;
-    padding: 8px 14px;
-    border-radius: 6px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: background-color 0.3s;
-  }
-  
-  .btn-cancelar:hover {
-    background: #c0392b;
-  }
-  
-  .status {
-    font-weight: bold;
-    margin-top: 8px;
-  }
-  
-  .status.confirmada {
-    color: #2ecc71; /* verde */
-  }
-  
-  .status.cancelada {
-    color: #e74c3c; /* vermelho */
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: #f5f7fa;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Cabeçalho */
+.dashboard-header {
+  background: white;
+  padding: 20px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  width: 40px;
+  height: 40px;
+}
+
+.logo h1 {
+  color: #1e3a1e;
+  font-size: 1.5rem;
+}
+
+.back-btn {
+  background: #23e865;
+  color: white;
+  padding: 8px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.back-btn:hover {
+  background: #1dd457;
+}
+
+/* Conteúdo principal */
+.dashboard-main {
+  flex: 1;
+  padding: 50px 5%;
+  text-align: center;
+}
+
+.consultas-section h2 {
+  color: #1e3a1e;
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+.consultas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.consulta-card {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s;
+  text-align: left;
+}
+
+.consulta-card:hover {
+  transform: translateY(-5px);
+}
+
+.consulta-card h3 {
+  color: #1e3a1e;
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+.consulta-card p {
+  color: #555;
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+
+.btn-cancelar {
+  margin-top: 10px;
+  background: #e74c3c;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.btn-cancelar:hover {
+  background: #c0392b;
+}
+
+.status {
+  font-weight: bold;
+  margin-top: 8px;
+}
+
+.status.confirmada {
+  color: #2ecc71; /* verde */
+}
+
+.status.cancelada {
+  color: #e74c3c; /* vermelho */
+}
+
+.btn-agendar-nova {
+  display: inline-block;
+  margin: 20px auto;
+  background: #23e865;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+  text-align: center;
+}
+
+.btn-agendar-nova:hover {
+  background: #1dd457;
+}
   

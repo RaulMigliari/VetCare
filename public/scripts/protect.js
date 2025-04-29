@@ -10,8 +10,19 @@ document.addEventListener('DOMContentLoaded', () => {
   const urlAtual = window.location.href.toLowerCase()
 
   // Rotas específicas
-  const clientePages = ['dashboard-cliente', 'perfil', 'consultas', 'agendar']
-  const clinicaPages = ['dashboard-clinica', 'agenda', 'prontuarios', 'clientes']
+  const clientePages = [
+    '/dashboard-cliente.html',
+    '/perfil.html',
+    '/consultas.html',
+    '/agendar.html'
+  ]
+  
+  const clinicaPages = [
+    '/dashboard-clinica.html',
+    '/agenda.html',
+    '/prontuarios.html',
+    '/clientes.html'
+  ]  
 
   const acessandoCliente = clientePages.some(page => urlAtual.includes(page))
   const acessandoClinica = clinicaPages.some(page => urlAtual.includes(page))

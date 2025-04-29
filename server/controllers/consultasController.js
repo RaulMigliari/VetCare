@@ -106,3 +106,54 @@ export async function cancelarConsulta(req, res) {
 
   res.status(200).json({ message: 'Consulta cancelada com sucesso!' })
 }
+
+export async function listarConsultasPorData(req, res) {
+  const { data } = req.query
+
+  if (!data) {
+    return res.status(400).json({ error: 'Data não fornecida.' })
+  }
+
+  const { data: consultas, error } = await supabase
+    .from('consultas')
+    .select(`
+      id,
+      data,
+      horario,
+      tipo,
+      status,
+      pets (
+        nome,
+        dono_id
+      )
+    `)
+    .eq('data', data)
+    .order('horario', { ascending: true })
+
+  if (error) {
+    return res.status(500).json({ error: error.message })
+  }
+
+  // Buscar também os tutores (clientes)
+  const consultasComTutor = await Promise.all(
+    consultas.map(async (consulta) => {
+      const { data: tutor, error: tutorError } = await supabase
+        .from('usuarios')
+        .select('nome')
+        .eq('id', consulta.pets.dono_id)
+        .single()
+
+      return {
+        id: consulta.id,
+        data: consulta.data,
+        horario: consulta.horario,
+        tipo: consulta.tipo,
+        status: consulta.status,
+        nome_pet: consulta.pets.nome,
+        nome_tutor: tutorError || !tutor ? 'Não encontrado' : tutor.nome
+      }
+    })
+  )
+
+  res.status(200).json(consultasComTutor)
+}
