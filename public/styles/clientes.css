@@ -1,4 +1,4 @@
-/* Reset */
+/* Reset básico */
 * {
     margin: 0;
     padding: 0;
@@ -55,36 +55,30 @@ body {
 
 /* Conteúdo principal */
 .dashboard-main {
+    padding: 40px 5%;
     flex: 1;
-    padding: 50px 5%;
-    text-align: center;
 }
 
 .clientes-section h2 {
     color: #1e3a1e;
     font-size: 2rem;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
+    text-align: center;
 }
 
-.clientes-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    max-width: 1200px;
+.clientes-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 1000px;
     margin: 0 auto;
 }
 
 .cliente-card {
     background: white;
-    padding: 25px;
+    padding: 20px;
     border-radius: 15px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-    text-align: left;
-    transition: transform 0.3s;
-}
-
-.cliente-card:hover {
-    transform: translateY(-5px);
 }
 
 .cliente-card h3 {
@@ -96,22 +90,37 @@ body {
 .cliente-card p {
     color: #555;
     font-size: 1rem;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
 }
 
-.cliente-card h4 {
+.pets-lista {
     margin-top: 15px;
+    padding-left: 15px;
+    border-left: 3px solid #23e865;
+}
+
+.pets-lista h4 {
     color: #1e3a1e;
     font-size: 1.1rem;
+    margin-bottom: 10px;
 }
 
-.pet-list {
-    list-style: inside;
-    color: #666;
-    margin-top: 8px;
+.pet-card {
+    background: #f9f9f9;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
 }
 
-.pet-list li {
-    font-size: 0.95rem;
+.pet-card p {
     margin-bottom: 5px;
+    font-size: 0.95rem;
+    color: #333;
 }
+
+.erro {
+    color: red;
+    text-align: center;
+    margin-top: 10px;
+}
+  

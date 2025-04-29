@@ -6,6 +6,7 @@ import dotenv from 'dotenv'
 import authRoutes from './routes/auth.js'
 import consultasRoutes from './routes/consultas.js'
 import prontuariosRoutes from './routes/prontuarios.js'
+import clientesRoutes from './routes/clientes.js'
 
 dotenv.config()
 
@@ -18,6 +19,7 @@ app.use(express.json())
 app.use('/api/auth', authRoutes)
 app.use('/api/consultas', consultasRoutes)
 app.use('/api/prontuarios', prontuariosRoutes)
+app.use('/api/clientes', clientesRoutes)
 
 console.log("Iniciando servidor VetCare...");
 
