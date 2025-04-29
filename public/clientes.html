@@ -21,10 +21,14 @@
   <main class="dashboard-main">
     <section class="clientes-section">
       <h2>Clientes e Pets</h2>
+      <form id="formBusca" class="busca-form">
+        <input type="text" id="buscaInput" placeholder="Buscar cliente pelo nome...">
+      </form>
       <div id="clientesLista" class="clientes-lista"></div>
     </section>
   </main>
 
   <script src="scripts/clientes.js" type="module"></script>
+  <script src="./scripts/protect.js" type="module"></script>
 </body>
 </html>

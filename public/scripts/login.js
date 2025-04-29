@@ -37,9 +37,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // Salvar dados do usuário logado
       localStorage.setItem('usuarioLogado', JSON.stringify({
+        id: result.id,
         nome: result.nome,
         tipo: result.tipo,
-        email: email
+        email: email,
+        telefone: result.telefone
       }))
       
       } catch (error) {

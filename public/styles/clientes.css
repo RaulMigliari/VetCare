@@ -123,4 +123,18 @@ body {
     text-align: center;
     margin-top: 10px;
 }
+
+.busca-form {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.busca-form input {
+    width: 300px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+}
   

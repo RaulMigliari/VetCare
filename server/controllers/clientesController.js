@@ -26,3 +26,19 @@ export async function listarClientes(req, res) {
 
   res.status(200).json(clientesComPets)
 }
+
+export async function atualizarCliente(req, res) {
+  const { id } = req.params
+  const { nome, email, telefone } = req.body
+
+  const { error } = await supabase
+    .from('usuarios')
+    .update({ nome, email, telefone })
+    .eq('id', id)
+
+  if (error) {
+    return res.status(500).json({ error: error.message })
+  }
+
+  res.status(200).json({ message: 'Dados atualizados com sucesso!' })
+}

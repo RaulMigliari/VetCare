@@ -64,7 +64,10 @@ export async function loginUser(req, res) {
   // OK - devolver dados úteis
   res.status(200).json({
     message: 'Login realizado com sucesso!',
+    id: usuario.id,
     nome: usuario.nome,
-    tipo: usuario.tipo
+    tipo: usuario.tipo,
+    email: usuario.email,
+    telefone: usuario.telefone || ''
   })
 }
